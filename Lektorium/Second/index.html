@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- In this part we have only name of company "Stackfindover" -->
+			<div class="header">
+				<h1>Stackfindover</h1>
+			</div>
+
+			<!-- In this part we have form with 4 inputs: text(2), checkbox(1), button(1) -->
+			<div class="content">
+				<form>
+					<p class="form-name">Sign in to your account</p>
+
+					<p class="form-text">Email</p>
+					<input type="text" id="Email" placeholder="Email" />
+
+					<p class="form-text">Password</p>
+					<input
+						type="password"
+						id="Password"
+						placeholder="Password"
+					/>
+
+					<a href="https://www.google.com" target="_blank"
+						>Forgot you password?</a
+					>
+
+					<br />
+
+					<input class="checkbox" type="checkbox" name="Stay" />
+					<label for="Stay">Stay signed in for a week</label>
+
+					<br />
+
+					<input
+						class="btn"
+						type="button"
+						id="button"
+						value="Sign in"
+					/>
+
+					<br />
+
+					<a href="https://www.google.com.ua/maps/" target="_blank"
+						>Use single sign-on (Google) instead</a
+					>
+				</form>
+			</div>
+
+			<!-- In this part we have only one row with text and link -->
+			<div class="footer">
+				<p>
+					Don't have an account?
+					<a href="https://facebook.com" target="_blank">Sign up</a>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
