@@ -1,0 +1,49 @@
+<div class="col-md-4 offset-md-4 text-center">
+  <form>
+    <!-- BACKGROUND IMAGE -->
+    <img
+      src="https://i.picsum.photos/id/982/320/200.jpg?blur=2&hmac=hwK6qJnXKp6gARKzFN9SFNcIcFVxuGrnT2gwWTZKq9Y"
+      alt="background image"
+      width="100%"
+      class="bg"
+    />
+
+    <!-- AVATAR -->
+    <img
+      src="https://randomuser.me/api/portraits/lego/1.jpg"
+      alt="avatar"
+      class="avatar"
+    />
+
+    <!-- TEXT -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-text fs-4">
+          <p>
+            {{ tweets }} <br />
+            TWEETS
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-text fs-4">
+          <p>
+            {{ followers }} <br />
+            FOLLOWERS
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTON -->
+    <button
+      [ngClass]="{ 'flw-button': toggle, 'unflw-button': !toggle }"
+      type="button"
+      class="flw-button"
+      (click)="changeColor()"
+      (click)="changeButton()"
+    >
+      {{ text }}
+    </button>
+  </form>
+</div>

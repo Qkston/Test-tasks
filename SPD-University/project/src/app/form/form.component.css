@@ -1,0 +1,41 @@
+.bg {
+  box-shadow: 0 12px 0 #5cc0ff;
+  border-radius: 25px 25px 0 0;
+}
+
+.avatar {
+  width: 130px;
+  height: 130px;
+  margin-top: -65px;
+  border: 12px solid #5cc0ff;
+  border-radius: 50%;
+}
+
+.form-text {
+  font-weight: 600;
+  color: #81878b;
+}
+
+.flw-button {
+  margin-top: 11px;
+  width: 180px;
+  height: 60px;
+  background-color: #2589cc;
+  color: #fff;
+  font-weight: 400;
+  font-size: 25px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.unflw-button {
+  margin-top: 11px;
+  width: 180px;
+  height: 60px;
+  background-color: green;
+  color: #fff;
+  font-weight: 400;
+  font-size: 25px;
+  border: 0;
+  border-radius: 8px;
+}
