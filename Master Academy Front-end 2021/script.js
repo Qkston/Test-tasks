@@ -19,4 +19,20 @@ window.addEventListener("DOMContentLoaded", () => {
 			startMap.innerHTML += `<div class="ocean"></div>`;
 		}
 	});
+
+	endMap.innerHTML = startMap.innerHTML;
+
+	endMap.childNodes.forEach((value, index) => {
+		if (
+			value.className === "infected" &&
+			!endMap.childNodes[index].nextElementSibling.classList.contains("ocean") &&
+			!endMap.childNodes[index].previousElementSibling.classList.contains("ocean")
+		) {
+			value.nextElementSibling.classList.add("infected");
+			value.nextElementSibling.classList.remove("uninfected");
+
+			value.previousElementSibling.classList.add("infected");
+			value.previousElementSibling.classList.remove("uninfected");
+		}
+	});
 });
