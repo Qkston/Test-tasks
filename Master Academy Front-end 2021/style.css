@@ -1,0 +1,24 @@
+.start-map,
+.end-map {
+	display: flex;
+}
+.infected {
+	margin-right: 5px;
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+.uninfected {
+	margin-right: 5px;
+	width: 100px;
+	height: 100px;
+	background: green;
+}
+
+.ocean {
+	margin-right: 5px;
+	width: 100px;
+	height: 100px;
+	background: blue;
+}
