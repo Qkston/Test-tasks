@@ -2,23 +2,28 @@ window.addEventListener("DOMContentLoaded", () => {
 	const startMap = document.querySelector(".start-map"),
 		endMap = document.querySelector(".end-map"),
 		result = document.querySelector(".result"),
-		totalCount = result.querySelector(".total-count");
+		totalCount = result.querySelector(".total-count"),
+		infectedCount = result.querySelector(".infected-count"),
+		percentage = result.querySelector(".percentage");
 
 	const pandemicStartMap = "01000000X000X011X0X";
+	let total = 0,
+		infected = 0;
 
 	pandemicStartMap.split("").forEach((value, index) => {
-		totalCount.textContent = `Total: ${index + 1}`;
-
 		if (value === "0") {
 			startMap.innerHTML += `<div class="uninfected"></div>`;
+			total++;
 		}
 		if (value === "1") {
 			startMap.innerHTML += `<div class="infected"></div>`;
+			total++;
 		}
 		if (value === "X") {
 			startMap.innerHTML += `<div class="ocean"></div>`;
 		}
 	});
+	totalCount.textContent = `Total: ${total}`;
 
 	endMap.innerHTML = startMap.innerHTML;
 
@@ -35,4 +40,13 @@ window.addEventListener("DOMContentLoaded", () => {
 			value.previousElementSibling.classList.remove("uninfected");
 		}
 	});
+
+	for (const value of endMap.childNodes) {
+		if (value.classList.contains("infected")) {
+			infected++;
+		}
+	}
+
+	infectedCount.textContent = `Infected: ${infected}`;
+	percentage.textContent = `Percentage: ${(infected / total) * 100}%`;
 });
